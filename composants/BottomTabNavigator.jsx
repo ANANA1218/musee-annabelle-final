@@ -10,6 +10,7 @@ import GetAllUsers from './back/GetAllUsers';
 import PeintureById from './front/PeintureById';
 import PostPeinture from './back/PostPeinture';
 import PostUsers from './back/PostUsers';
+import CreatepeintureByID from './front/CreatepeintureByID';
 
 
 const Tab = createBottomTabNavigator();
@@ -116,7 +117,7 @@ export default function BottomTabNavigator() {
       
       <Tab.Screen
         name="Profile"
-        component={PeintureList}
+        component={CreatepeintureByID}
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color, size }) => {
