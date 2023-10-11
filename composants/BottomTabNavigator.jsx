@@ -13,9 +13,11 @@ import PostUsers from './back/PostUsers';
 import CreatepeintureByID from './front/CreatepeintureByID';
 
 
+
 const Tab = createBottomTabNavigator();
 
 export default function BottomTabNavigator() {
+  
   return (
     
     <Tab.Navigator
@@ -90,10 +92,10 @@ export default function BottomTabNavigator() {
       
      
       <Tab.Screen
-        name="logout"
-        component={PeintureList}
+        name="Déconnexion"
+        component={GetAllUsers}
         options={{
-          tabBarLabel: 'logout',
+          tabBarLabel: 'Déconnexion',
           tabBarIcon: ({ color, size }) => {
             return <Icon name="logout" size={size} color={color} />;
           },
