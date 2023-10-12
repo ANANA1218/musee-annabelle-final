@@ -14,6 +14,8 @@ import PostPeinture from './back/PostPeinture';
 import PostUsers from './back/PostUsers';
 import CreatepeintureByID from './front/CreatepeintureByID';
 import Logout from './login/Logout';
+import Profile from './front/Profile';
+import Password from './login/Password';
 
 
 const Tab = createBottomTabNavigator();
@@ -151,7 +153,7 @@ const RedacteurNavigator = () => (
     />
     <Tab.Screen
       name="Profile"
-      component={CreatepeintureByID}
+      component={Profile}
       options={{
         tabBarLabel: 'Profile',
         tabBarIcon: ({ color, size }) => (
@@ -198,4 +200,5 @@ export const Routes = {
   PeintureById: PeintureById,
   PostPeinture: PostPeinture,
   PostUsers: PostUsers,
+  Password: Password,
 };
