@@ -1,8 +1,8 @@
-import React, { useState } from 'react'; // Importez useState depuis React
+import React, { useState } from 'react'; 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import BottomTabNavigator, { Routes } from './composants/BottomTabNavigator'; 
-import LoginForm from './composants/login/FormLogin'; // Assurez-vous d'importer le bon chemin
+import LoginForm from './composants/login/FormLogin'; 
 
 const Stack = createStackNavigator();
 

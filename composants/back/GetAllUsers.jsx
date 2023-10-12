@@ -3,12 +3,12 @@ import { collection, getDocs, deleteDoc, doc, updateDoc } from "firebase/firesto
 import db from '../config';
 import { useNavigation } from '@react-navigation/native';
 import { Link } from 'react-router-dom';
-import './GetAllUsers.css'; // Import du fichier CSS
+import './GetAllUsers.css'; 
 import { Button as PaperButton } from 'react-native-paper';
 
 const GetAllUsers = () => {
     const [users, setUsers] = useState([]);
-    const navigation = useNavigation(); // Initialisez la navigation
+    const navigation = useNavigation(); 
 
 
     useEffect(() => {
@@ -35,7 +35,7 @@ const GetAllUsers = () => {
     }
 
     return (
-        <div className="art-exhibition"> {/* Ajout de la classe pour le CSS */}
+        <div className="art-exhibition"> 
               <PaperButton
                 mode="contained"
                 onPress={() => navigation.navigate('PostUsers')}

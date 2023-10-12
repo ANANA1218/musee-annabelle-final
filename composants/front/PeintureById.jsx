@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Image, StyleSheet, TextInput } from 'react-native';
 import { Text, Card, Title, Paragraph, Button } from 'react-native-paper';
-import { getDoc, updateDoc, deleteDoc } from 'firebase/firestore'; // Importez les fonctions nécessaires
-import { doc } from 'firebase/firestore'; // Importez les fonctions nécessaires
+import { getDoc, updateDoc, deleteDoc } from 'firebase/firestore'; 
+import { doc } from 'firebase/firestore'; 
 import db from '../config';
 
 const PeintureById = ({ route }) => {
@@ -48,7 +48,7 @@ const PeintureById = ({ route }) => {
         auteur: auteur,
         dateCreation: dateCreation,
       });
-      setEditMode(false); // Désactiver le mode d'édition après avoir enregistré les modifications
+      setEditMode(false); 
       console.log('Données mises à jour avec succès !');
     } catch (error) {
       console.error('Erreur lors de la mise à jour des données :', error);

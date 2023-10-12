@@ -57,7 +57,7 @@ const Profile = () => {
     if (!error) {
       addDoc(collection(db, "oeuvres"), oeuvre)
         .then(() => {
-          // Navigate back to the Home page
+        
           navigation.navigate('Home');
         })
         .catch(error => {
@@ -72,7 +72,7 @@ const Profile = () => {
     <Text>Bienvenue, {email}</Text>
     <Text>Role: {role}</Text>
   
-    <Divider style={styles.divider} /> {/* Add a horizontal line */}
+    <Divider style={styles.divider} /> 
 
     <Text>Ajouter une oeuvre</Text>
     <TextInput
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
   },
   divider: {
     marginVertical: 20,
-    height: 1, // Set the height of the divider
-    backgroundColor: 'gray', // Set the color of the divider
+    height: 1,
+    backgroundColor: 'gray', 
   },
 });

@@ -7,7 +7,7 @@ import { View, Button } from 'react-native';
 
 const PeintureList = () => {
     const [oeuvres, setOeuvres] = useState([]);
-    const navigation = useNavigation(); // Initialisez la navigation
+    const navigation = useNavigation(); 
 
     useEffect(() => {
         const fetchOeuvres = async () => {
