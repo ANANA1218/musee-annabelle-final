@@ -50,7 +50,6 @@ const GetAllUsers = () => {
                         <th>ID</th>
                         <th>Email</th>
                         <th>Role</th>
-                        <th>Oeuvre</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -60,7 +59,6 @@ const GetAllUsers = () => {
                             <td>{oeuvre.id}</td>
                             <td contentEditable onBlur={(e) => handleEdit(oeuvre.id, 'email', e.target.textContent)}>{oeuvre.email}</td>
                             <td contentEditable onBlur={(e) => handleEdit(oeuvre.id, 'role', e.target.textContent)}>{oeuvre.role}</td>
-                            <td contentEditable onBlur={(e) => handleEdit(oeuvre.id, 'oeuvre', e.target.textContent)}>{oeuvre.role}</td>
                             <td><button onClick={() => handleDelete(oeuvre.id)}>Supprimer</button></td>
                         </tr>
                     ))}

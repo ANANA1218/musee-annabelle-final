@@ -38,6 +38,11 @@ const App = () => {
           options={{ title: 'Ajouter un utilisateur' }}
         />
        
+       <Stack.Screen
+          name="PasswordOublie"
+          component={Routes.Password}
+          options={{ title: 'password oublié' }}
+        />
       </Stack.Navigator>
 
     </NavigationContainer>

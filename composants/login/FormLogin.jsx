@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button } from 'react-native';
+import { View, TextInput, TouchableOpacity  } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
+import { Button, Text } from 'react-native-paper'; 
 
 const Connexion = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigation = useNavigation(); // Get navigation object
+  const navigation = useNavigation(); 
 
   const handleLogin = async () => {
     if (email === 'admin@yahoo.fr' && password === 'azerty1234') {
@@ -14,34 +15,50 @@ const Connexion = () => {
       await AsyncStorage.setItem('role', 'admin');
       console.log('ok admin');
       navigation.navigate('Main');
-      // Rediriger vers l'écran d'admin
+
     } else if (email === 'redac@yahoo.fr' && password === 'azerty1234') {
       await AsyncStorage.setItem('email', email);
       await AsyncStorage.setItem('role', 'redacteur');
       console.log('ok redacteur');
       navigation.navigate('Main');
-      // Rediriger vers l'écran de rédacteur
+ 
     } else {
-      // Afficher un message d'erreur
+      
       console.log('pas autorise');
     }
   };
 
+  const handleForgotPassword = () => {
+  
+    navigation.navigate('PasswordOublie');
+  };
+
   return (
-    <View>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ width: '80%' }}>
       <TextInput
         placeholder="Email"
         value={email}
         onChangeText={setEmail}
+        style={{ marginBottom: 10, padding: 10, borderWidth: 1 }}
       />
       <TextInput
         placeholder="Mot de passe"
         secureTextEntry
         value={password}
         onChangeText={setPassword}
+        style={{ marginBottom: 10, padding: 10, borderWidth: 1 }}
       />
-      <Button title="Se connecter" onPress={handleLogin} />
+      <Button mode="contained" onPress={handleLogin}>
+        Se connecter
+      </Button>
+      <TouchableOpacity onPress={handleForgotPassword}>
+          <Text style={{ textAlign: 'center', marginTop: 10, color: 'blue' }}>
+            Mot de passe oublié ?
+          </Text>
+        </TouchableOpacity>
     </View>
+  </View>
   );
 };
 
